@@ -1,0 +1,102 @@
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 1rem;
+    background-color: white;
+    width: 100%;
+    max-width: 1230px;
+    height: 408px;
+    margin-left: auto; 
+    margin-right: auto; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 
+    0px 8px 20px rgba(0, 0, 0, 0.15);
+border-radius: 8px;
+}
+
+.newsletter h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .newsletter h1 {
+        font-size: 3rem;
+    }
+}
+
+.newsletter p {
+    font-size: 0.875rem;
+    color: #9CA3AF;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .newsletter p {
+        margin-top: 2.5rem;
+    }
+}
+
+.newsletter .input-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 2.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    display: flex; 
+}
+
+.input-field {
+    width: 100%;
+    height: 64px;
+    border-radius: 10px;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    background-color: #F1F5F9;
+    border: none;
+}
+
+.input-field:focus {
+    outline: 2px solid #f86338;
+}
+
+.news-icon {
+    width: 48px;
+    height: 48px;
+    margin-left: -70px;
+    margin-top: 8px;
+    border-radius: 0 0.375rem 0.375rem 0; 
+    cursor: pointer; 
+}
+
+.news-icon:hover {
+    background-color: #E2E8F0;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .newsletter {
+        margin-left: 0; 
+        margin-right: 0; 
+        padding: 0 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .input-field {
+        height: 50px; 
+    }
+
+    .news-icon {
+        width: 40px; 
+        height: 40px; 
+        margin-left: -60px; 
+    }
+}

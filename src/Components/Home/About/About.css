@@ -1,0 +1,60 @@
+.brand-story-container {
+    max-width: 80rem;
+    margin: auto;
+    padding: 4rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .brand-story-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .brand-story-image {
+    width: 607px;
+    height: 720px;
+    object-fit: cover;
+    margin-left: 0.5rem;
+  }
+  
+  .brand-story-content {
+    margin-top: 0;
+  }
+  
+  .brand-story-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #1F2937;
+  }
+  
+  .brand-story-description {
+    color: #6B7280;
+    line-height: 1.625;
+  }
+  
+  .brand-story-read-more {
+    color: #F86338;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 767px) {
+    .mobile-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .brand-story-content {
+      padding: 1rem;
+    }
+  }
+.mobile-image{
+    width: 400px;
+    height: 300px;
+}  

@@ -1,0 +1,78 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #F1F1F6;
+  padding: 16px;
+  top: 0;
+}
+
+.left {
+  margin-left: 70px;
+}
+
+.logoName {
+  text-align: center;
+}
+
+.logoText {
+  color: #F86338;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.right {
+  display: flex;
+  gap: 48px;
+  margin-right: 100px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.text {
+  font-size: 18px;
+}
+
+@media (max-width: 639px) {
+  .topbar {
+    padding: 8px;
+  }
+
+  .left {
+    margin-left: 20px;
+  }
+
+  .right {
+    margin-right: 16px;
+    gap: 16px;
+  }
+
+  .text {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .topbar {
+    padding: 16px 24px;
+  }
+
+  .left {
+    margin-left: 24px;
+  }
+
+  .right {
+    margin-right: 24px;
+    gap: 24px;
+  }
+}

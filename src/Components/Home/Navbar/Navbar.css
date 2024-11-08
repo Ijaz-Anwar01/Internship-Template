@@ -1,0 +1,281 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #F1F1F6;
+  height: 90px;
+  padding: 0 5%;
+  top: 0;
+}
+
+.navbar-left {
+  margin-left: 0;
+}
+
+.navbar-navList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.navbar-navLink {
+  position: relative;
+  color: #333;
+  transition: all 0.3s ease;
+  
+}
+
+.navbar-navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #F86338;
+  transition: width 0.3s ease;
+}
+
+.navbar-navLink:hover::after {
+  width: 100%;
+}
+
+.navbar-center {
+  position: relative;
+  width: 597px;
+}              
+
+.navbar-searchInput {
+  width: 100%;
+  height: 58px;
+  padding: 8px 32px 8px 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.navbar-searchInput:focus {
+  border-color: #F86338;
+}
+
+.navbar-searchIcon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  width: 248px;
+  height: 44px;
+  margin-right: 20px;
+}
+
+.navbar-actionIcon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 16px;
+}
+
+.navbar-actionIcon:hover {
+  transform: scale(1.1);
+}
+
+.navbar-actionIcon:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 8px;
+    height: auto;
+    margin-bottom: -40px;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-navList {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      font-size: 14px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 250px;
+      background: linear-gradient(to right ,#7474BF, #348AC7);
+      z-index: 1;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      margin-right: 0px;
+    }
+
+    .navbar-navLink{
+      color: rgba(202, 235, 248, 0.83);
+      margin-left: 20px;
+      font-size: 20px;
+    
+    }
+
+  .navbar-navList.open {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .navbar-hamburger {
+    display: block;
+    position: relative;
+    z-index: 2;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navbar-hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f97316;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+}
+
+
+
+
+  .navbar-center {
+    display: flex;
+    width: 100%; 
+    margin-top: 8px;
+  }
+
+  .navbar-searchInput {
+    height: 40px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .navbar-right {
+    margin-top: 8px;
+    gap: 8px;
+    justify-content: flex-end  ;
+    width: 100%;
+  }
+
+  .navbar-actionIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar-hamburger {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    margin-top: 8px;
+    transition:all 0.3s ease-in-out;
+  }
+
+  .bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    margin-left:-190px;
+    position: relative;
+    top: -46px;
+    left: -170px;
+  }
+  .navbar-cartBadge{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    font-size: 8px;
+    right: -16px;
+    top: -4px;
+  }
+
+  
+}
+
+@media (min-width: 640px) {
+  .navbar-center {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-navList {
+    gap: 16px;
+  }
+
+  .navbar-navLink {
+    font-size: 1.125rem;
+  }
+
+  .navbar-right {
+    gap: 16px;
+  }
+}
+
+.navbar-actionIcon-container {
+  position: relative;
+}
+
+.navbar-cartBadge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #f97316;
+  color: white;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px)  {
+ 
+  .navbar-left{
+  
+ position: relative;
+ left: -20px;
+
+  }
+
+  .navbar-actionIcon{
+    width: 20px;
+    height: 20px;
+  }
+
+  .navbar-cartBadge{
+    width: 10px;
+    height: 10px;
+    font-size: 8px;
+    right: -6px;
+    top: -4px;
+  }
+
+
+
+}
